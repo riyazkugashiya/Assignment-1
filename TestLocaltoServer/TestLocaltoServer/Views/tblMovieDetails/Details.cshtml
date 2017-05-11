@@ -11,7 +11,16 @@
     <hr />
     
         <dl class="dl-horizontal">
-
+            @if (User.Identity.Name == "admin@admin.com")
+            {
+            
+                <dt>
+                    @Html.DisplayNameFor(model => model.AspNetUser.UserName)
+                </dt>
+                <dd>
+                @Html.DisplayFor(model => model.AspNetUser.Email)
+                </dd>
+            }
             <dt>
                 @Html.DisplayNameFor(model => model.MovieName)
             </dt>
@@ -48,6 +57,11 @@
    
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+
+    @if (User.Identity.Name != "admin@admin.com")
+    {
+         @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) <span>|</span>
+    }                                                          
+
     @Html.ActionLink("Back to List", "Index")
 </p>

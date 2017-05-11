@@ -11,6 +11,16 @@
     
     <hr />
     <dl class="dl-horizontal">
+        @if (User.Identity.Name == "admin@admin.com")
+        {
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AspNetUser.UserName)
+            </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.AspNetUser.Email)
+                </dd>
+        }
         <dt>
             @Html.DisplayNameFor(model => model.MovieName)
         </dt>
@@ -49,7 +59,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
             @Html.ActionLink("Back to List", "Index")
         </div>
     }

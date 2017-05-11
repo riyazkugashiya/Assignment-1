@@ -791,7 +791,7 @@ pre code {
 
 .row {
   margin-right: -15px;
-  margin-left: -15px;
+  margin-left: 40px;
 }
 
 .row:before,
@@ -1724,7 +1724,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .form-control {
   display: block;
-  width: 100%;
+  width: 200px;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
@@ -1738,13 +1738,20 @@ input[type="number"]::-webkit-inner-spin-button {
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
           transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+
 }
 
 .form-control:focus {
   border-color: #66afe9;
   outline: 0;
+  transition:500ms all ease;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+
+}
+.form-control:hover
+{
+    width:500px;
 }
 
 .form-control[disabled],
@@ -2019,7 +2026,7 @@ textarea.input-lg {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-       -o-user-select: none;
+       -moz-user-select: none;
           user-select: none;
 }
 
@@ -4507,12 +4514,17 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-color: #222222;
-  border-color: #080808;
+  /*background-color: #800000;*/
+  background-image:url("top_bg.jpg");
+  background-size:cover;
+  background-size:250px,500px;
+  background-position-y:-45px;
+  border-color: black;
 }
 
 .navbar-inverse .navbar-brand {
   color: #999999;
+ font-weight:bold;
 }
 
 .navbar-inverse .navbar-brand:hover,
@@ -4527,6 +4539,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse .navbar-nav > li > a {
   color: #999999;
+  font-weight:bold;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
@@ -4940,7 +4953,7 @@ a.list-group-item.active > .badge,
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
-  background-color: #eeeeee;
+  background-color: burlywood;
 }
 
 .jumbotron h1 {
